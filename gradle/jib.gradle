@@ -1,0 +1,12 @@
+jib {
+    from {
+        image = "amazoncorretto:17"
+    }
+    to {
+        image = "" // set ecr repository uri
+        tags = ["latest"]
+    }
+    container {
+        jvmFlags = ["-Xms256m", "-Xmx256m"]
+    }
+}
